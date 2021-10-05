@@ -21,7 +21,7 @@ test_set = data.filter_by(2, 'set')
 train_set = data.filter_by(1, 'set')
 print('[INFO] Test and train sets ready')
 
-model = tc.sound_classifier.create(train_set, target='category', feature='audio', validation_set=None, max_iterations=250)
+model = tc.sound_classifier.create(train_set, target='category', feature='audio', validation_set=None, max_iterations=100)
 print('[INFO] Created model')
 
 predictions = model.predict(test_set)
